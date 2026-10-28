@@ -15,6 +15,7 @@ jobs:
           node-version: 22
       - run: node scripts/htb-activity.mjs
       - run: |
+          git pull origin main
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add htb-activity.json htb-activity.svg
