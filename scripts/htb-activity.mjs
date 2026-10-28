@@ -21,7 +21,7 @@ const exp = expRes.ok ? await expRes.json() : null;
 
 writeFileSync(DATA_FILE, JSON.stringify({ matrix: data, experience: exp }, null, 2));
 
-const cellSize = 11, gap = 4, weeksPerMonth = 5, monthGap = 6;
+const cellSize = 11, gap = 4, weeksPerMonth = 5, monthGap = 10;
 const colors = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
 const colStep = cellSize + gap;
 
@@ -66,7 +66,7 @@ const statCards = [
 
 const totalHeight = cardTop + cardHeight + 24;
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">
+const svg = `svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMinYMin meet">
   <rect width="${totalWidth}" height="${totalHeight}" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
   <text x="${padX}" y="26" font-size="14" font-family="system-ui, sans-serif" fill="#c9d1d9">
     <tspan fill="#39d353" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
