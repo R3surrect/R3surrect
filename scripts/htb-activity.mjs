@@ -21,14 +21,22 @@ const exp = expRes.ok ? await expRes.json() : null;
 
 writeFileSync(DATA_FILE, JSON.stringify({ matrix: data, experience: exp }, null, 2));
 
-const cellSize = 14, gap = 3, weeksPerMonth = 5;
+const cellSize = 11, gap = 4, weeksPerMonth = 5;
 const colors = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
+const colStep = cellSize + gap;
+const monthGap = 6; // доп. зазор между колонками-месяцами, чтобы подписи не слипались
+
+const padLeft = 20, padTop = 36, padBottom = 44, padRight = 16;
 
 let cells = '';
+let monthLabels = '';
 data.months.forEach((month, monthIndex) => {
+  const colX = padLeft + monthIndex * (colStep + monthGap);
+  monthLabels += `<text x="${colX}" y="${padTop - 14}" font-size="10" font-family="system-ui, sans-serif" fill="#8b949e">${month.label.slice(0, 3)}</text>`;
+
   month.weeks.forEach((week, weekIndex) => {
-    const x = monthIndex * (cellSize + gap);
-    const y = weekIndex * (cellSize + gap);
+    const x = colX;
+    const y = padTop + weekIndex * colStep;
     const color = week.is_placeholder ? 'transparent' : colors[week.level];
     const title = week.is_placeholder
       ? ''
@@ -37,23 +45,21 @@ data.months.forEach((month, monthIndex) => {
   });
 });
 
-const monthLabels = data.months
-  .map((m, i) => `<text x="${i * (cellSize + gap)}" y="-6" font-size="9" fill="#8b949e">${m.label.slice(0, 3)}</text>`)
-  .join('');
+const gridWidth = data.months.length * (colStep + monthGap) - monthGap;
+const gridHeight = weeksPerMonth * colStep - gap;
+const totalWidth = padLeft + gridWidth + padRight;
+const totalHeight = padTop + gridHeight + padBottom;
 
-const gridWidth = data.months.length * (cellSize + gap);
-const gridHeight = weeksPerMonth * (cellSize + gap);
-
-const statsLine = exp
-  ? `<text x="0" y="${gridHeight + 24}" font-size="12" fill="#c9d1d9">Lvl ${exp.level} · ${exp.levelTitle} · ${exp.totalExperiencePoints} XP total · streak ${exp.streakData.counter}w</text>`
+const statsText = exp
+  ? `Lvl ${exp.level} · ${exp.levelTitle} · ${exp.totalExperiencePoints} XP total · ${exp.streakData.counter}w streak`
   : '';
 
-const totalHeight = gridHeight + (exp ? 40 : 12);
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${gridWidth}" height="${totalHeight}" viewBox="0 -12 ${gridWidth} ${totalHeight}">
-  <rect width="${gridWidth}" height="${totalHeight + 12}" y="-12" fill="#0d1117"/>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}">
+  <rect width="${totalWidth}" height="${totalHeight}" rx="8" fill="#0d1117"/>
+  <text x="${padLeft}" y="18" font-size="13" font-family="system-ui, sans-serif" fill="#c9d1d9">
+    <tspan fill="#39d353" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
+  </text>
   ${monthLabels}
   ${cells}
-  ${statsLine}
+  <text x="${padLeft}" y="${totalHeight - 16}" font-size="11" font-family="system-ui, sans-serif" fill="#8b949e">${statsText}</text>
 </svg>`;
-
-writeFileSync(SVG_FILE, svg);
