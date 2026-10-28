@@ -1,4 +1,3 @@
-// scripts/htb-activity.mjs
 import { writeFileSync } from 'fs';
 
 const MATRIX_ID = '01a17712-d11e-71a4-adab-35773d9fcd06';
@@ -28,11 +27,10 @@ const BORDER_COLOR = '#182232';
 const cellWidth = 16.5;
 const cellHeight = 11;
 const gapY = 4;
-const monthGap = 5;
 const weeksPerMonth = 5;
 const colors = [BORDER_COLOR, '#0e4429', '#006d32', '#26a641', NEON_GREEN];
-const colStepX = cellWidth;
 const rowStepY = cellHeight + gapY;
+const monthCount = data.months.length;
 
 const pad = 20;
 const padTop = pad + 36;
@@ -40,10 +38,14 @@ const padTop = pad + 36;
 const titleText = `${data.period_total_xp} XP gained on Hack The Box in the last year`;
 const estimatedTitleWidth = titleText.length * 7.2;
 
+const minGridWidth = monthCount * cellWidth;
+const contentWidth = Math.max(minGridWidth, estimatedTitleWidth);
+const monthGap = (contentWidth - monthCount * cellWidth) / (monthCount - 1);
+
 let cells = '';
 let monthLabels = '';
 data.months.forEach((month, monthIndex) => {
-  const colX = pad + monthIndex * (colStepX + monthGap);
+  const colX = pad + monthIndex * (cellWidth + monthGap);
   monthLabels += `<text x="${colX}" y="${padTop - 14}" font-size="10" font-family="${FONT}" fill="#8b949e">${month.label.slice(0, 3)}</text>`;
 
   month.weeks.forEach((week, weekIndex) => {
@@ -56,10 +58,7 @@ data.months.forEach((month, monthIndex) => {
   });
 });
 
-const gridWidth = data.months.length * (colStepX + monthGap) - monthGap;
 const gridHeight = weeksPerMonth * rowStepY - gapY;
-
-const contentWidth = Math.max(gridWidth, estimatedTitleWidth);
 const totalWidth = pad * 2 + contentWidth;
 
 const cardGap = 16, cardTop = padTop + gridHeight + 24, cardHeight = 84;
