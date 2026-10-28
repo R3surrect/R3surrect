@@ -21,17 +21,22 @@ const exp = expRes.ok ? await expRes.json() : null;
 
 writeFileSync(DATA_FILE, JSON.stringify({ matrix: data, experience: exp }, null, 2));
 
+const FONT = "'Segoe UI', Helvetica, Arial, sans-serif";
+const NEON_GREEN = '#39ff88';
+const NEON_CYAN = '#22d3ee';
+
 const cellSize = 11, gap = 4, weeksPerMonth = 5, monthGap = 10;
 const colors = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
 const colStep = cellSize + gap;
 
-const padX = 24, padTop = 56, padRight = 24;
+const pad = 20;
+const padTop = pad + 36;
 
 let cells = '';
 let monthLabels = '';
 data.months.forEach((month, monthIndex) => {
-  const colX = padX + monthIndex * (colStep + monthGap);
-  monthLabels += `<text x="${colX}" y="${padTop - 14}" font-size="10" font-family="system-ui, sans-serif" fill="#8b949e">${month.label.slice(0, 3)}</text>`;
+  const colX = pad + monthIndex * (colStep + monthGap);
+  monthLabels += `<text x="${colX}" y="${padTop - 14}" font-size="10" font-family="${FONT}" fill="#8b949e">${month.label.slice(0, 3)}</text>`;
 
   month.weeks.forEach((week, weekIndex) => {
     const y = padTop + weekIndex * colStep;
@@ -45,9 +50,8 @@ data.months.forEach((month, monthIndex) => {
 
 const gridWidth = data.months.length * (colStep + monthGap) - monthGap;
 const gridHeight = weeksPerMonth * colStep - gap;
-const totalWidth = padX + gridWidth + padRight;
+const totalWidth = pad * 2 + gridWidth;
 
-// карточки статов
 const cardGap = 16, cardTop = padTop + gridHeight + 24, cardHeight = 68;
 const cardWidth = (gridWidth - cardGap * 2) / 3;
 
@@ -56,20 +60,20 @@ const statCards = [
   { label: 'Total XP', value: `${data.total_xp}` },
   { label: 'Weeks Active', value: `${data.weeks_active} week${data.weeks_active === 1 ? '' : 's'}` },
 ].map((card, i) => {
-  const x = padX + i * (cardWidth + cardGap);
+  const x = pad + i * (cardWidth + cardGap);
   return `
-    <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="8" fill="none" stroke="#30363d" stroke-width="1"/>
-    <text x="${x + 16}" y="${cardTop + 26}" font-size="11" font-family="system-ui, sans-serif" fill="#8b949e">${card.label}</text>
-    <text x="${x + 16}" y="${cardTop + 48}" font-size="16" font-weight="600" font-family="system-ui, sans-serif" fill="#e6edf3">${card.value}</text>
+    <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${NEON_CYAN}" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="${x + 14}" y="${cardTop + 26}" font-size="11" font-family="${FONT}" fill="#8b949e">${card.label}</text>
+    <text x="${x + 14}" y="${cardTop + 48}" font-size="16" font-weight="600" font-family="${FONT}" fill="${NEON_GREEN}">${card.value}</text>
   `;
 }).join('');
 
-const totalHeight = cardTop + cardHeight + 24;
+const totalHeight = cardTop + cardHeight + pad;
 
-const svg = `svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMinYMin meet">
-  <rect width="${totalWidth}" height="${totalHeight}" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
-  <text x="${padX}" y="26" font-size="14" font-family="system-ui, sans-serif" fill="#c9d1d9">
-    <tspan fill="#39d353" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMinYMin meet">
+  <rect width="${totalWidth}" height="${totalHeight}" rx="6" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
+  <text x="${pad}" y="${pad + 6}" font-size="14" font-family="${FONT}" fill="#c9d1d9">
+    <tspan fill="${NEON_GREEN}" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
   </text>
   ${monthLabels}
   ${cells}
