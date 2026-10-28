@@ -22,14 +22,17 @@ const exp = expRes.ok ? await expRes.json() : null;
 writeFileSync(DATA_FILE, JSON.stringify({ matrix: data, experience: exp }, null, 2));
 
 const FONT = "'Segoe UI', Helvetica, Arial, sans-serif";
-const NEON_GREEN = '#39ff88';
+const NEON_GREEN = '#9fef00';
 const NEON_CYAN = '#22d3ee';
 
-const cellSize = 16.5;
-const gap = 0;
-const weeksPerMonth = 5, monthGap = 10;
+const cellWidth = 16.5;
+const cellHeight = 11;
+const gapY = 4;
+const monthGap = 10;
+const weeksPerMonth = 5;
 const colors = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
-const colStep = cellSize + gap;
+const colStepX = cellWidth;
+const rowStepY = cellHeight + gapY;
 
 const pad = 20;
 const padTop = pad + 36;
@@ -37,55 +40,38 @@ const padTop = pad + 36;
 let cells = '';
 let monthLabels = '';
 data.months.forEach((month, monthIndex) => {
-  const colX = pad + monthIndex * (colStep + monthGap);
+  const colX = pad + monthIndex * (colStepX + monthGap);
   monthLabels += `<text x="${colX}" y="${padTop - 14}" font-size="10" font-family="${FONT}" fill="#8b949e">${month.label.slice(0, 3)}</text>`;
 
   month.weeks.forEach((week, weekIndex) => {
-    const y = padTop + weekIndex * colStep;
+    const y = padTop + weekIndex * rowStepY;
     const color = week.is_placeholder ? 'transparent' : colors[week.level];
     const title = week.is_placeholder
       ? ''
       : `<title>${week.start_at.slice(0, 10)} – ${week.end_at.slice(0, 10)}: ${week.xp_earned} XP</title>`;
-    cells += `<rect x="${colX}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${color}">${title}</rect>`;
+    cells += `<rect x="${colX}" y="${y}" width="${cellWidth}" height="${cellHeight}" rx="2" fill="${color}">${title}</rect>`;
   });
 });
 
-const gridWidth = data.months.length * (colStep + monthGap) - monthGap;
-const gridHeight = weeksPerMonth * colStep;
+const gridWidth = data.months.length * (colStepX + monthGap) - monthGap;
+const gridHeight = weeksPerMonth * rowStepY - gapY;
 const totalWidth = pad * 2 + gridWidth;
 
 const cardGap = 16, cardTop = padTop + gridHeight + 24, cardHeight = 72;
 const cardWidth = (gridWidth - cardGap * 2) / 3;
 
-const wrapLabel = (text, maxChars) => {
-  const words = text.split(' ');
-  const lines = [];
-  let current = '';
-  for (const word of words) {
-    const candidate = current ? `${current} ${word}` : word;
-    if (candidate.length > maxChars && current) {
-      lines.push(current);
-      current = word;
-    } else {
-      current = candidate;
-    }
-  }
-  if (current) lines.push(current);
-  return lines;
-};
+const cardsSpec = [
+  { label: ['Weekly', 'Average'], value: `${data.weekly_average_xp} XP` },
+  { label: ['Total XP'], value: `${data.total_xp}` },
+  { label: ['Weeks', 'Active'], value: `${data.weeks_active} week${data.weeks_active === 1 ? '' : 's'}` },
+];
 
-const statCards = [
-  { label: 'Weekly Average', value: `${data.weekly_average_xp} XP` },
-  { label: 'Total XP', value: `${data.total_xp}` },
-  { label: 'Weeks Active', value: `${data.weeks_active} week${data.weeks_active === 1 ? '' : 's'}` },
-].map((card, i) => {
+const statCards = cardsSpec.map((card, i) => {
   const x = pad + i * (cardWidth + cardGap);
-  const maxChars = Math.floor(cardWidth / 6.2);
-  const lines = wrapLabel(card.label, maxChars);
-  const labelLines = lines
+  const labelLines = card.label
     .map((line, idx) => `<tspan x="${x + 14}" dy="${idx === 0 ? 0 : 13}">${line}</tspan>`)
     .join('');
-  const valueY = cardTop + (lines.length > 1 ? 44 : 48);
+  const valueY = cardTop + (card.label.length > 1 ? 44 : 48);
 
   return `
     <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${NEON_CYAN}" stroke-width="1" stroke-opacity="0.5"/>
