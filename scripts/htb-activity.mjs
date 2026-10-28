@@ -25,7 +25,9 @@ const FONT = "'Segoe UI', Helvetica, Arial, sans-serif";
 const NEON_GREEN = '#39ff88';
 const NEON_CYAN = '#22d3ee';
 
-const cellSize = 11, gap = 4, weeksPerMonth = 5, monthGap = 10;
+const cellSize = 16.5;
+const gap = 0;
+const weeksPerMonth = 5, monthGap = 10;
 const colors = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
 const colStep = cellSize + gap;
 
@@ -49,11 +51,28 @@ data.months.forEach((month, monthIndex) => {
 });
 
 const gridWidth = data.months.length * (colStep + monthGap) - monthGap;
-const gridHeight = weeksPerMonth * colStep - gap;
+const gridHeight = weeksPerMonth * colStep;
 const totalWidth = pad * 2 + gridWidth;
 
-const cardGap = 16, cardTop = padTop + gridHeight + 24, cardHeight = 68;
+const cardGap = 16, cardTop = padTop + gridHeight + 24, cardHeight = 72;
 const cardWidth = (gridWidth - cardGap * 2) / 3;
+
+const wrapLabel = (text, maxChars) => {
+  const words = text.split(' ');
+  const lines = [];
+  let current = '';
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (candidate.length > maxChars && current) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = candidate;
+    }
+  }
+  if (current) lines.push(current);
+  return lines;
+};
 
 const statCards = [
   { label: 'Weekly Average', value: `${data.weekly_average_xp} XP` },
@@ -61,10 +80,17 @@ const statCards = [
   { label: 'Weeks Active', value: `${data.weeks_active} week${data.weeks_active === 1 ? '' : 's'}` },
 ].map((card, i) => {
   const x = pad + i * (cardWidth + cardGap);
+  const maxChars = Math.floor(cardWidth / 6.2);
+  const lines = wrapLabel(card.label, maxChars);
+  const labelLines = lines
+    .map((line, idx) => `<tspan x="${x + 14}" dy="${idx === 0 ? 0 : 13}">${line}</tspan>`)
+    .join('');
+  const valueY = cardTop + (lines.length > 1 ? 44 : 48);
+
   return `
     <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${NEON_CYAN}" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="${x + 14}" y="${cardTop + 26}" font-size="11" font-family="${FONT}" fill="#8b949e">${card.label}</text>
-    <text x="${x + 14}" y="${cardTop + 48}" font-size="16" font-weight="600" font-family="${FONT}" fill="${NEON_GREEN}">${card.value}</text>
+    <text x="${x + 14}" y="${cardTop + 20}" font-size="11" font-family="${FONT}" fill="#8b949e">${labelLines}</text>
+    <text x="${x + 14}" y="${valueY}" font-size="16" font-weight="600" font-family="${FONT}" fill="${NEON_GREEN}">${card.value}</text>
   `;
 }).join('');
 
