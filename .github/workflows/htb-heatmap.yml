@@ -15,21 +15,24 @@ jobs:
       - name: python_setup
         uses: actions/setup-python@v4
         with:
-          python-node: '3.10'
+          python-version: '3.10'
 
       - name: generate_heatmap
         env:
           HTB_TOKEN: ${{ secrets.HTB_TOKEN }}
         run: |
-          python -c '
-            import os, requests, datetime
-            headers = {"Authorization": f"Bearer {os.environ[\"HTB_TOKEN\"]}"}
-          '
+          python << 'EOF'
+          import os, requests, datetime
+          
+          token = os.environ.get("HTB_TOKEN")
+          headers = {"Authorization": f"Bearer {token}"}
+          
+          EOF
           
       - name: Commit and Push SVG
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "github-actions[bot]@://github.com"
           git add assets/htb_heatmap.svg || true
           git commit -m "update_htb_heatmap" || true
           git push || true
