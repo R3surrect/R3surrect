@@ -88,7 +88,7 @@ const statCards = cardsSpec.map((card, i) => {
 const totalHeight = cardTop + cardHeight + pad;
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMinYMin meet">
-  <rect x="0.5" y="0.5" width="${totalWidth - 1}" height="${totalHeight - 1}" rx="6" fill="#333c4e" stroke="${NEON_GREEN}" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="${totalWidth - 1}" height="${totalHeight - 1}" rx="6" fill="#101927" stroke="${NEON_GREEN}" stroke-width="1"/>
   <text x="${pad}" y="${pad + 6}" font-size="14" font-family="${FONT}" fill="#c9d1d9">
     <tspan fill="${NEON_GREEN}" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
   </text>
