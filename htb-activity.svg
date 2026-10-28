@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="378.40000000000003" height="255" viewBox="0 0 378.40000000000003 255" preserveAspectRatio="xMinYMin meet">
-  <rect x="0.5" y="0.5" width="377.40000000000003" height="254" rx="6" fill="#0d1117" stroke="#9fef00" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="377.40000000000003" height="254" rx="6" fill="#333c4e" stroke="#9fef00" stroke-width="1"/>
   <text x="20" y="26" font-size="14" font-family="'Segoe UI', Helvetica, Arial, sans-serif" fill="#c9d1d9">
     <tspan fill="#9fef00" font-weight="700">1145 XP</tspan> gained on Hack The Box in the last year
   </text>
