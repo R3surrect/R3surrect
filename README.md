@@ -4,14 +4,14 @@
 <center>
   <details open>
     <summary>
-         <code>🟩 <b>Hack The Box</b></code> <code> :: </code> <code>Level</code> <code> << </code> <code>[spoiler]</code>
+       <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b> </code> <code> << </code> <code> [spoiler] </code>
     </summary>
    </br>
   <img src="https://www.htbbadge.tech/api/badge?user=90202" alt="htb_heatmap" width="100%" height="75%"/>
   </details>
   <details open>
     <summary>
-       <code>🟪 <b>Hack The Box</b></code> <code> :: </code> <code>HeatMap</code> <code> << </code> <code>[spoiler]</code>
+       <code> 🟪 Hack The Box </code> <code> :: </code> <code> <b>HeatMap</b> </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
     <img src="./htb-activity.svg" alt="htb_heatmap" width="100%"/>
