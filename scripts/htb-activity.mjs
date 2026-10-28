@@ -37,6 +37,9 @@ const rowStepY = cellHeight + gapY;
 const pad = 20;
 const padTop = pad + 36;
 
+const titleText = `${data.period_total_xp} XP gained on Hack The Box in the last year`;
+const estimatedTitleWidth = titleText.length * 7.2;
+
 let cells = '';
 let monthLabels = '';
 data.months.forEach((month, monthIndex) => {
@@ -55,10 +58,12 @@ data.months.forEach((month, monthIndex) => {
 
 const gridWidth = data.months.length * (colStepX + monthGap) - monthGap;
 const gridHeight = weeksPerMonth * rowStepY - gapY;
-const totalWidth = pad * 2 + gridWidth;
+
+const contentWidth = Math.max(gridWidth, estimatedTitleWidth);
+const totalWidth = pad * 2 + contentWidth;
 
 const cardGap = 16, cardTop = padTop + gridHeight + 24, cardHeight = 84;
-const cardWidth = (gridWidth - cardGap * 2) / 3;
+const cardWidth = (contentWidth - cardGap * 2) / 3;
 
 const cardsSpec = [
   { label: ['Weekly', 'Average'], value: `${data.weekly_average_xp} XP` },
