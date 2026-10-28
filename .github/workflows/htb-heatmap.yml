@@ -1,0 +1,35 @@
+name: regenerate_htb_heatmap
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update-heatmap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout_repo
+        uses: actions/checkout@v3
+
+      - name: python_setup
+        uses: actions/setup-python@v4
+        with:
+          python-node: '3.10'
+
+      - name: generate_heatmap
+        env:
+          HTB_TOKEN: ${{ secrets.HTB_TOKEN }}
+        run: |
+          python -c '
+            import os, requests, datetime
+            headers = {"Authorization": f"Bearer {os.environ[\"HTB_TOKEN\"]}"}
+          '
+          
+      - name: Commit and Push SVG
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/htb_heatmap.svg || true
+          git commit -m "update_htb_heatmap" || true
+          git push || true
