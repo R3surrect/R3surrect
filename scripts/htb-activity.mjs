@@ -23,14 +23,14 @@ writeFileSync(DATA_FILE, JSON.stringify({ matrix: data, experience: exp }, null,
 
 const FONT = "'Segoe UI', Helvetica, Arial, sans-serif";
 const NEON_GREEN = '#9fef00';
-const NEON_CYAN = '#22d3ee';
+const BORDER_COLOR = '#182232';
 
 const cellWidth = 16.5;
 const cellHeight = 11;
 const gapY = 4;
-const monthGap = 10;
+const monthGap = 5;
 const weeksPerMonth = 5;
-const colors = ['#161b22', '#0e4429', '#006d32', '#26a641', NEON_GREEN];
+const colors = [BORDER_COLOR, '#0e4429', '#006d32', '#26a641', NEON_GREEN];
 const colStepX = cellWidth;
 const rowStepY = cellHeight + gapY;
 
@@ -68,14 +68,14 @@ const cardsSpec = [
 
 const statCards = cardsSpec.map((card, i) => {
   const x = pad + i * (cardWidth + cardGap);
-  const valueY = cardTop + cardHeight - 16;
-  const labelY = card.label.length > 1 ? valueY - 36 : valueY - 22;
+  const labelY = cardTop + 20;
   const labelLines = card.label
     .map((line, idx) => `<tspan x="${x + 14}" dy="${idx === 0 ? 0 : 13}">${line}</tspan>`)
     .join('');
+  const valueY = cardTop + cardHeight - 16;
 
   return `
-    <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${NEON_CYAN}" stroke-width="1" stroke-opacity="0.5"/>
+    <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${BORDER_COLOR}" stroke-width="1"/>
     <text x="${x + 14}" y="${labelY}" font-size="11" font-family="${FONT}" fill="#8b949e">${labelLines}</text>
     <text x="${x + 14}" y="${valueY}" font-size="16" font-weight="600" font-family="${FONT}" fill="${NEON_GREEN}">${card.value}</text>
   `;
@@ -84,8 +84,7 @@ const statCards = cardsSpec.map((card, i) => {
 const totalHeight = cardTop + cardHeight + pad;
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMinYMin meet">
-  <rect x="1" y="1" width="${totalWidth - 2}" height="${totalHeight - 2}" rx="6" fill="#0d1117" stroke="${NEON_GREEN}" stroke-width="2" stroke-opacity="0.9"/>
-  <rect x="1" y="1" width="${totalWidth - 2}" height="${totalHeight - 2}" rx="6" fill="none" stroke="${NEON_GREEN}" stroke-width="5" stroke-opacity="0.15"/>
+  <rect x="0.5" y="0.5" width="${totalWidth - 1}" height="${totalHeight - 1}" rx="6" fill="#0d1117" stroke="${NEON_GREEN}" stroke-width="1"/>
   <text x="${pad}" y="${pad + 6}" font-size="14" font-family="${FONT}" fill="#c9d1d9">
     <tspan fill="${NEON_GREEN}" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
   </text>
