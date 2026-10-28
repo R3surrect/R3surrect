@@ -21,14 +21,14 @@ const exp = expRes.ok ? await expRes.json() : null;
 writeFileSync(DATA_FILE, JSON.stringify({ matrix: data, experience: exp }, null, 2));
 
 const FONT = "'Segoe UI', Helvetica, Arial, sans-serif";
-const NEON_GREEN = '#9fef00';
-const BORDER_COLOR = '#182232';
+const MAIN_COLOR = '#b25eeb';
+const BORDER_COLOR = '#b25eeb';
 
 const cellWidth = 16.5;
 const cellHeight = 11;
 const gapY = 4;
 const weeksPerMonth = 5;
-const colors = [BORDER_COLOR, '#0e4429', '#006d32', '#26a641', NEON_GREEN];
+const colors = [BORDER_COLOR, '#0e4429', '#006d32', '#26a641', MAIN_COLOR];
 const rowStepY = cellHeight + gapY;
 const monthCount = data.months.length;
 
@@ -81,16 +81,16 @@ const statCards = cardsSpec.map((card, i) => {
   return `
     <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${BORDER_COLOR}" stroke-width="1"/>
     <text x="${x + 14}" y="${labelY}" font-size="11" font-family="${FONT}" fill="#8b949e">${labelLines}</text>
-    <text x="${x + 14}" y="${valueY}" font-size="16" font-weight="600" font-family="${FONT}" fill="${NEON_GREEN}">${card.value}</text>
+    <text x="${x + 14}" y="${valueY}" font-size="16" font-weight="600" font-family="${FONT}" fill="${MAIN_COLOR}">${card.value}</text>
   `;
 }).join('');
 
 const totalHeight = cardTop + cardHeight + pad;
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMinYMin meet">
-  <rect x="0.5" y="0.5" width="${totalWidth - 1}" height="${totalHeight - 1}" rx="6" fill="#101927" stroke="${NEON_GREEN}" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="${totalWidth - 1}" height="${totalHeight - 1}" rx="6" fill="#101927" stroke="${MAIN_COLOR}" stroke-width="1"/>
   <text x="${pad}" y="${pad + 6}" font-size="14" font-family="${FONT}" fill="#c9d1d9">
-    <tspan fill="${NEON_GREEN}" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
+    <tspan fill="${MAIN_COLOR}" font-weight="700">${data.period_total_xp} XP</tspan> gained on Hack The Box in the last year
   </text>
   ${monthLabels}
   ${cells}
