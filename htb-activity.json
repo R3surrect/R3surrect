@@ -12,27 +12,27 @@
       {
         "level": 1,
         "min_xp": 1,
-        "max_xp": 287
+        "max_xp": 312
       },
       {
         "level": 2,
-        "min_xp": 288,
-        "max_xp": 574
+        "min_xp": 313,
+        "max_xp": 624
       },
       {
         "level": 3,
-        "min_xp": 575,
-        "max_xp": 861
+        "min_xp": 625,
+        "max_xp": 936
       },
       {
         "level": 4,
-        "min_xp": 862,
-        "max_xp": 1145
+        "min_xp": 937,
+        "max_xp": 1245
       }
     ],
     "weeks_active": 1,
-    "period_total_xp": 1145,
-    "weekly_average_xp": 1145,
+    "period_total_xp": 1245,
+    "weekly_average_xp": 1245,
     "months": [
       {
         "month": "2025-12",
@@ -492,7 +492,7 @@
           {
             "start_at": "2026-10-26 00:00:00",
             "end_at": "2026-11-01 23:59:59",
-            "xp_earned": 1145,
+            "xp_earned": 1245,
             "level": 4,
             "is_placeholder": false
           },
@@ -527,7 +527,7 @@
         ]
       }
     ],
-    "total_xp": 2965
+    "total_xp": 3065
   },
   "experience": {
     "level": 12,
@@ -537,9 +537,9 @@
     "rankImageBackground": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/backgrounds/beginner.svg",
     "outroAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_beginner_out.json",
     "introAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_beginner_in.json",
-    "totalExperiencePoints": 2965,
-    "levelExperiencePoints": 42,
-    "experienceUntilNextLevel": 319,
+    "totalExperiencePoints": 3065,
+    "levelExperiencePoints": 142,
+    "experienceUntilNextLevel": 219,
     "streakData": {
       "counter": 1,
       "currentExperiencePoints": 210,
