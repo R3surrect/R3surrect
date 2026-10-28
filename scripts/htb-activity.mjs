@@ -22,7 +22,7 @@ writeFileSync(DATA_FILE, JSON.stringify({ matrix: data, experience: exp }, null,
 
 const FONT = "'Segoe UI', Helvetica, Arial, sans-serif";
 const MAIN_COLOR = '#b25eeb';
-const BORDER_COLOR = '#b25eeb';
+const BORDER_COLOR = '#182232';
 
 const cellWidth = 16.5;
 const cellHeight = 11;
@@ -79,7 +79,7 @@ const statCards = cardsSpec.map((card, i) => {
   const valueY = cardTop + cardHeight - 16;
 
   return `
-    <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${BORDER_COLOR}" stroke-width="1"/>
+    <rect x="${x}" y="${cardTop}" width="${cardWidth}" height="${cardHeight}" rx="6" fill="none" stroke="${MAIN_COLOR}" stroke-width="1"/>
     <text x="${x + 14}" y="${labelY}" font-size="11" font-family="${FONT}" fill="#8b949e">${labelLines}</text>
     <text x="${x + 14}" y="${valueY}" font-size="16" font-weight="600" font-family="${FONT}" fill="${MAIN_COLOR}">${card.value}</text>
   `;
