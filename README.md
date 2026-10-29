@@ -1,3 +1,4 @@
+</hr>
 <center>
   <h1>HTB Info</h1>
 </center>
