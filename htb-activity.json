@@ -12,27 +12,27 @@
       {
         "level": 1,
         "min_xp": 1,
-        "max_xp": 442
+        "max_xp": 673
       },
       {
         "level": 2,
-        "min_xp": 443,
-        "max_xp": 884
+        "min_xp": 674,
+        "max_xp": 1346
       },
       {
         "level": 3,
-        "min_xp": 885,
-        "max_xp": 1326
+        "min_xp": 1347,
+        "max_xp": 2019
       },
       {
         "level": 4,
-        "min_xp": 1327,
-        "max_xp": 1765
+        "min_xp": 2020,
+        "max_xp": 2690
       }
     ],
     "weeks_active": 1,
-    "period_total_xp": 1765,
-    "weekly_average_xp": 1765,
+    "period_total_xp": 2690,
+    "weekly_average_xp": 2690,
     "months": [
       {
         "month": "2025-12",
@@ -492,7 +492,7 @@
           {
             "start_at": "2026-10-26 00:00:00",
             "end_at": "2026-11-01 23:59:59",
-            "xp_earned": 1765,
+            "xp_earned": 2690,
             "level": 4,
             "is_placeholder": false
           },
@@ -527,19 +527,19 @@
         ]
       }
     ],
-    "total_xp": 3585
+    "total_xp": 4510
   },
   "experience": {
-    "level": 13,
-    "levelTitle": "Beginner",
-    "levelGrade": "3",
-    "rankImage": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/svg/rank_beginner.svg",
-    "rankImageBackground": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/backgrounds/beginner.svg",
-    "outroAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_beginner_out.json",
-    "introAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_beginner_in.json",
-    "totalExperiencePoints": 3585,
-    "levelExperiencePoints": 301,
-    "experienceUntilNextLevel": 75,
+    "level": 16,
+    "levelTitle": "Apprentice",
+    "levelGrade": "1",
+    "rankImage": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/svg/rank_apprentice.svg",
+    "rankImageBackground": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/backgrounds/apprentice.svg",
+    "outroAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_apprentice_out.json",
+    "introAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_apprentice_in.json",
+    "totalExperiencePoints": 4510,
+    "levelExperiencePoints": 52,
+    "experienceUntilNextLevel": 370,
     "streakData": {
       "counter": 1,
       "currentExperiencePoints": 210,
