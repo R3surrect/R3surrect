@@ -48,6 +48,7 @@
     </summary>
     </br>
       <img src="https://img.shields.io/badge/Hono-8a7bb0.svg?style=for-the-badge&logo=hono&logoColor=white" alt="Hono"/>
+      <img src="https://img.shields.io/badge/HonoRPC-7b9ab5.svg?style=for-the-badge&logo=hono&logoColor=white" alt="HonoRPC"/>
       <img src="https://img.shields.io/badge/Zod-6f9bb5.svg?style=for-the-badge&logo=zod&logoColor=white" alt="Zod"/>
       <img src="https://img.shields.io/badge/PostgreSQL-6fa88a.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
       <img src="https://img.shields.io/badge/Node.js-8faa6f.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
