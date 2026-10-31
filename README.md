@@ -1,6 +1,6 @@
 <h1>HTB Info</h1>
 <center>
-  <details open>
+  <details>
     <summary>
        <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b> </code> <code> << </code> <code> [spoiler] </code>
     </summary>
@@ -70,21 +70,23 @@
        <code> 🧰 Tools </code> <code> :: </code> <code> <b> Main </b> </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
-      <img src="https://img.shields.io/badge/Alacritty-8a7bb0.svg?style=for-the-badge&logo=Alacritty&logoColor=white" alt="Alacritty" />
-      <img src="https://img.shields.io/badge/Neovim-6fa88a.svg?style=for-the-badge&logo=Neovim&logoColor=white" alt="Neovim" />
-      <img src="https://img.shields.io/badge/VSCodium-6f8fb5.svg?style=for-the-badge&logo=VSCodium&logoColor=white" alt="VSCodium" />
+      <img src="https://img.shields.io/badge/npm-b57ba8.svg?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/>
       <img src="https://img.shields.io/badge/pnpm-b5a06f.svg?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm"/>
       <img src="https://img.shields.io/badge/Husky-6fa8a0.svg?style=for-the-badge&logo=husky&logoColor=white" alt="Husky"/>
   </details>
     <details open>
     <summary>
-       <code> 🐧 Environment </code> <code> :: </code> <code> <b> OS </b> </code> <code> << </code> <code> [spoiler] </code>
+       <code> 🐧 Environment </code> <code> :: </code> <code> <b> Tools </b> </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/Wayland-b5a06f.svg?style=for-the-badge&logo=Wayland&logoColor=white" alt="Wayland" />
       <img src="https://img.shields.io/badge/Hyprland-6fa8a0.svg?style=for-the-badge&logo=Hyprland&logoColor=white" alt="Hyprland" />
       <img src="https://img.shields.io/badge/Arch%20Linux-6f8fb5.svg?style=for-the-badge&logo=Arch-Linux&logoColor=white" alt="Arch Linux"/>
       <img src="https://img.shields.io/badge/EndeavourOS-8a7bb0.svg?style=for-the-badge&logo=EndeavourOS&logoColor=white" alt="EndeavourOS"/>
+      <img src="https://img.shields.io/badge/Alacritty-8a7bb0.svg?style=for-the-badge&logo=Alacritty&logoColor=white" alt="Alacritty" />
+      <img src="https://img.shields.io/badge/fish%20shell-6fa88a.svg?style=for-the-badge&logo=fish-shell&logoColor=white" alt="Fish Shell"/>
+      <img src="https://img.shields.io/badge/VSCodium-6f8fb5.svg?style=for-the-badge&logo=VSCodium&logoColor=white" alt="VSCodium" />
+      <img src="https://img.shields.io/badge/Neovim-6fa88a.svg?style=for-the-badge&logo=Neovim&logoColor=white" alt="Neovim" />
   </details>
   </details>
     <details open>
