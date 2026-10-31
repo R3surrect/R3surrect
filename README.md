@@ -1,8 +1,8 @@
 <h1>HTB Info</h1>
 <center>
-  <details>
+  <details open>
     <summary>
-       <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b> </code> <code> << </code> <code> [spoiler] </code>
+       <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b>   </code> <code> << </code> <code> [spoiler] </code>
     </summary>
    </br>
   <img src="https://www.htbbadge.tech/api/badge?user=90202" alt="htb_heatmap" width="100%" height="75%"/>
@@ -19,7 +19,21 @@
 <center>
   <details open>
     <summary>
-       <code> 💻 Frontend Stack </code> <code> :: </code> <code> <b>Tech</b> </code> <code> << </code> <code> [spoiler] </code>
+       <code> <b>🐧 Environment</b>  </code> <code> :: </code> <code> <b>Tools</b>   </code> <code> << </code> <code> [spoiler] </code>
+    </summary>
+    </br>
+      <img src="https://img.shields.io/badge/Wayland-b5a06f.svg?style=for-the-badge&logo=Wayland&logoColor=white" alt="Wayland" />
+      <img src="https://img.shields.io/badge/Hyprland-6fa8a0.svg?style=for-the-badge&logo=Hyprland&logoColor=white" alt="Hyprland" />
+      <img src="https://img.shields.io/badge/Arch%20Linux-6f8fb5.svg?style=for-the-badge&logo=Arch-Linux&logoColor=white" alt="Arch Linux"/>
+      <img src="https://img.shields.io/badge/EndeavourOS-8a7bb0.svg?style=for-the-badge&logo=EndeavourOS&logoColor=white" alt="EndeavourOS"/>
+      <img src="https://img.shields.io/badge/Alacritty-8a7bb0.svg?style=for-the-badge&logo=Alacritty&logoColor=white" alt="Alacritty" />
+      <img src="https://img.shields.io/badge/fish%20shell-6fa88a.svg?style=for-the-badge&logo=fish-shell&logoColor=white" alt="Fish Shell"/>
+      <img src="https://img.shields.io/badge/VSCodium-6f8fb5.svg?style=for-the-badge&logo=VSCodium&logoColor=white" alt="VSCodium" />
+      <img src="https://img.shields.io/badge/Neovim-6fa88a.svg?style=for-the-badge&logo=Neovim&logoColor=white" alt="Neovim" />
+  </details>
+  <details open>
+    <summary>
+       <code> <b>💻 Frontend</b>     </code> <code> :: </code> <code> <b>Tech</b>    </code> <code> << </code> <code> [spoiler] </code>
     </summary>
    </br>
     <img src="https://img.shields.io/badge/React-6f8fb5.svg?style=for-the-badge&logo=react&logoColor=white" alt="React"/>
@@ -44,7 +58,7 @@
   </details>
   <details open>
     <summary>
-       <code> ⚙️ Backend Stack </code> <code> :: </code> <code> <b>Core</b> </code> <code> << </code> <code> [spoiler] </code>
+       <code> <b>⚙️ Backend</b>      </code> <code> :: </code> <code> <b>Core</b>    </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/Hono-8a7bb0.svg?style=for-the-badge&logo=hono&logoColor=white" alt="Hono"/>
@@ -56,42 +70,27 @@
       <img src="https://img.shields.io/badge/ESLint-b57ba8.svg?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint"/>
       <img src="https://img.shields.io/badge/dotenv-6fa8a0.svg?style=for-the-badge&logo=dotenv&logoColor=white" alt="dotenv"/>
   </details>
-    <details open>
+  <details open>
     <summary>
-       <code> ♾️ DevOps </code> <code> :: </code> <code> <b> CI/CD </b> </code> <code> << </code> <code> [spoiler] </code>
+       <code> <b>♾️ DevOps</b>       </code> <code> :: </code> <code> <b>CI/CD</b>   </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/.ENV-8faa6f.svg?style=for-the-badge&logo=dotenv&logoColor=white" alt="DotEnv"/>
       <img src="https://img.shields.io/badge/Docker-6f8fb5.svg?style=for-the-badge&logo=Docker&logoColor=white" alt="Docker"/>
       <img src="https://img.shields.io/badge/GitHub%20Actions-7b9ab5.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white" alt="Github Actions"/>
   </details>
-    <details open>
+  <details open>
     <summary>
-       <code> 🧰 Tools </code> <code> :: </code> <code> <b> Main </b> </code> <code> << </code> <code> [spoiler] </code>
+       <code> <b>🧰 Tools</b>        </code> <code> :: </code> <code> <b>Main</b>    </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/npm-b57ba8.svg?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/>
       <img src="https://img.shields.io/badge/pnpm-b5a06f.svg?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm"/>
       <img src="https://img.shields.io/badge/Husky-6fa8a0.svg?style=for-the-badge&logo=husky&logoColor=white" alt="Husky"/>
   </details>
-    <details open>
+  <details open>
     <summary>
-       <code> 🐧 Environment </code> <code> :: </code> <code> <b> Tools </b> </code> <code> << </code> <code> [spoiler] </code>
-    </summary>
-    </br>
-      <img src="https://img.shields.io/badge/Wayland-b5a06f.svg?style=for-the-badge&logo=Wayland&logoColor=white" alt="Wayland" />
-      <img src="https://img.shields.io/badge/Hyprland-6fa8a0.svg?style=for-the-badge&logo=Hyprland&logoColor=white" alt="Hyprland" />
-      <img src="https://img.shields.io/badge/Arch%20Linux-6f8fb5.svg?style=for-the-badge&logo=Arch-Linux&logoColor=white" alt="Arch Linux"/>
-      <img src="https://img.shields.io/badge/EndeavourOS-8a7bb0.svg?style=for-the-badge&logo=EndeavourOS&logoColor=white" alt="EndeavourOS"/>
-      <img src="https://img.shields.io/badge/Alacritty-8a7bb0.svg?style=for-the-badge&logo=Alacritty&logoColor=white" alt="Alacritty" />
-      <img src="https://img.shields.io/badge/fish%20shell-6fa88a.svg?style=for-the-badge&logo=fish-shell&logoColor=white" alt="Fish Shell"/>
-      <img src="https://img.shields.io/badge/VSCodium-6f8fb5.svg?style=for-the-badge&logo=VSCodium&logoColor=white" alt="VSCodium" />
-      <img src="https://img.shields.io/badge/Neovim-6fa88a.svg?style=for-the-badge&logo=Neovim&logoColor=white" alt="Neovim" />
-  </details>
-  </details>
-    <details open>
-    <summary>
-       <code> 🧠 AI Stack </code> <code> :: </code> <code> <b>Models</b> </code> <code> << </code> <code> [spoiler] </code>
+       <code> <b>🧠 AI</b>           </code> <code> :: </code> <code> <b>Models</b>  </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/Claude-8a7bb0.svg?style=for-the-badge&logo=Claude&logoColor=white" alt="Claude"/>
@@ -99,4 +98,4 @@
       <img src="https://img.shields.io/badge/DeepSeek-6f8fb5.svg?style=for-the-badge&logo=DeepSeek&logoColor=white" alt="Deepseek"/>
   </details>
 </center>
-<hr/>
+<!-- <hr/> -->
