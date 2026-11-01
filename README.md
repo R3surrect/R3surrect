@@ -1,18 +1,18 @@
   <center>
     <details open>
       <summary>
-        <h1>HTB Info</h1>
+        <h1>[HTB Info]</h1>
       </summary>
     <details open>
       <summary>
-         <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b>   </code> <code> << </code> <code> [spoiler] </code>
+         <code><b>----------></b></code> <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b>   </code> <code> << </code> <code> [spoiler] </code>
       </summary>
      </br>
     <img src="https://www.htbbadge.tech/api/badge?user=90202" alt="htb_heatmap" width="100%" height="75%"/>
     </details>
     <details>
       <summary>
-         <code> 🟪 Hack The Box </code> <code> :: </code> <code> <b>HeatMap</b> </code> <code> << </code> <code> [spoiler] </code>
+         <code><b>----------></b></code> <code> 🟪 Hack The Box </code> <code> :: </code> <code> <b>HeatMap</b> </code> <code> << </code> <code> [spoiler] </code>
       </summary>
       </br>
       <img src="./htb-activity.svg" alt="htb_heatmap" width="100%"/>
@@ -22,12 +22,12 @@
 </hr>
 <details open>
   <summary>
-    <h1>Stack Info</h1>
+    <h1>[Stack Info]</h1>
   </summary>
 <center>
   <details open>
     <summary>
-       <code> <b>🐧 Environment</b>  </code> <code> :: </code> <code> <b>Tools</b>   </code> <code> << </code> <code> [spoiler] </code>
+       <code><b>----------></b></code> <code> <b>🐧 Environment</b>  </code> <code> :: </code> <code> <b>Tools</b>   </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/Wayland-b5a06f.svg?style=for-the-badge&logo=Wayland&logoColor=white" alt="Wayland" />
@@ -41,7 +41,7 @@
   </details>
   <details open>
     <summary>
-       <code> <b>💻 Frontend</b>     </code> <code> :: </code> <code> <b>Tech</b>    </code> <code> << </code> <code> [spoiler] </code>
+       <code><b>----------></b></code> <code> <b>💻 Frontend</b>     </code> <code> :: </code> <code> <b>Tech</b>    </code> <code> << </code> <code> [spoiler] </code>
     </summary>
    </br>
     <img src="https://img.shields.io/badge/React-6f8fb5.svg?style=for-the-badge&logo=react&logoColor=white" alt="React"/>
@@ -66,7 +66,7 @@
   </details>
   <details open>
     <summary>
-       <code> <b>⚙️ Backend</b>      </code> <code> :: </code> <code> <b>Core</b>    </code> <code> << </code> <code> [spoiler] </code>
+       <code><b>----------></b></code> <code> <b>⚙️ Backend</b>      </code> <code> :: </code> <code> <b>Core</b>    </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/Hono-8a7bb0.svg?style=for-the-badge&logo=hono&logoColor=white" alt="Hono"/>
@@ -80,7 +80,7 @@
   </details>
   <details open>
     <summary>
-       <code> <b>♾️ DevOps</b>       </code> <code> :: </code> <code> <b>CI/CD</b>   </code> <code> << </code> <code> [spoiler] </code>
+       <code><b>----------></b></code> <code> <b>♾️ DevOps</b>       </code> <code> :: </code> <code> <b>CI/CD</b>   </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/.ENV-8faa6f.svg?style=for-the-badge&logo=dotenv&logoColor=white" alt="DotEnv"/>
@@ -89,7 +89,7 @@
   </details>
   <details open>
     <summary>
-       <code> <b>🧰 Tools</b>        </code> <code> :: </code> <code> <b>Main</b>    </code> <code> << </code> <code> [spoiler] </code>
+       <code><b>----------></b></code> <code> <b>🧰 Tools</b>        </code> <code> :: </code> <code> <b>Main</b>    </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/npm-b57ba8.svg?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/>
@@ -98,7 +98,7 @@
   </details>
   <details open>
     <summary>
-       <code> <b>🧠 AI</b>           </code> <code> :: </code> <code> <b>Models</b>  </code> <code> << </code> <code> [spoiler] </code>
+       <code><b>----------></b></code> <code> <b>🧠 AI</b>           </code> <code> :: </code> <code> <b>Models</b>  </code> <code> << </code> <code> [spoiler] </code>
     </summary>
     </br>
       <img src="https://img.shields.io/badge/Claude-8a7bb0.svg?style=for-the-badge&logo=Claude&logoColor=white" alt="Claude"/>
