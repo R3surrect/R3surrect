@@ -1,4 +1,5 @@
-<details>
+<hr>
+<details open>
   <center>
       <summary>
         <h1>[HTB Info]</h1>
@@ -10,7 +11,7 @@
      </br>
     <img src="https://www.htbbadge.tech/api/badge?user=90202" alt="htb_heatmap" width="100%" height="75%"/>
     </details>
-    <details open>
+    <details>
       <summary>
          <code><b>----------></b></code> <code> 🟪 Hack The Box </code> <code> :: </code> <code> <b>HeatMap</b> </code> <code> << </code> <code> [spoiler] </code>
       </summary>
@@ -19,8 +20,9 @@
     </details>
   </center>
 </details>
-<center>
-<details>
+<hr>
+<details open>
+  <center>
   <summary>
     <h1>[Stack Info]</h1>
   </summary>
@@ -104,6 +106,6 @@
         <img src="https://img.shields.io/badge/Claude%20Code-b57ba8.svg?style=for-the-badge&logo=Claude-Code&logoColor=white" alt="Claude Code"/>
         <img src="https://img.shields.io/badge/DeepSeek-6f8fb5.svg?style=for-the-badge&logo=DeepSeek&logoColor=white" alt="Deepseek"/>
     </details>
-  </details>
-</center>
-<!-- <hr/> -->
+  </center>
+</details>
+<hr>
