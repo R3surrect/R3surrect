@@ -1,21 +1,29 @@
-<h1>HTB Info</h1>
-<center>
-  <details open>
-    <summary>
-       <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b>   </code> <code> << </code> <code> [spoiler] </code>
-    </summary>
-   </br>
-  <img src="https://www.htbbadge.tech/api/badge?user=90202" alt="htb_heatmap" width="100%" height="75%"/>
-  </details>
-  <details>
-    <summary>
-       <code> 🟪 Hack The Box </code> <code> :: </code> <code> <b>HeatMap</b> </code> <code> << </code> <code> [spoiler] </code>
-    </summary>
-    </br>
-    <img src="./htb-activity.svg" alt="htb_heatmap" width="100%"/>
+  <center>
+    <details open>
+      <summary>
+        <h1>HTB Info</h1>
+      </summary>
+    <details open>
+      <summary>
+         <code> 🟩 Hack The Box </code> <code> :: </code> <code> <b>Level</b>   </code> <code> << </code> <code> [spoiler] </code>
+      </summary>
+     </br>
+    <img src="https://www.htbbadge.tech/api/badge?user=90202" alt="htb_heatmap" width="100%" height="75%"/>
+    </details>
+    <details>
+      <summary>
+         <code> 🟪 Hack The Box </code> <code> :: </code> <code> <b>HeatMap</b> </code> <code> << </code> <code> [spoiler] </code>
+      </summary>
+      </br>
+      <img src="./htb-activity.svg" alt="htb_heatmap" width="100%"/>
+    </details>
   </details>
 </center>
-<h1>Stack Info</h1>
+</hr>
+<details open>
+  <summary>
+    <h1>Stack Info</h1>
+  </summary>
 <center>
   <details open>
     <summary>
@@ -97,5 +105,6 @@
       <img src="https://img.shields.io/badge/Claude%20Code-b57ba8.svg?style=for-the-badge&logo=Claude-Code&logoColor=white" alt="Claude Code"/>
       <img src="https://img.shields.io/badge/DeepSeek-6f8fb5.svg?style=for-the-badge&logo=DeepSeek&logoColor=white" alt="Deepseek"/>
   </details>
+</details>
 </center>
 <!-- <hr/> -->
