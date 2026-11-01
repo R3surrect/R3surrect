@@ -1,4 +1,3 @@
-<hr>
 <details open>
   <center>
       <summary>
@@ -20,8 +19,8 @@
     </details>
   </center>
 </details>
-<hr>
-<details open>
+ <!-- <code> ------------------------------------------------------------------------------------------------------------------------ </code> -->
+<details>
   <center>
   <summary>
     <h1>[Stack Info]</h1>
