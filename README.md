@@ -10,7 +10,7 @@
      </br>
     <img src="https://www.htbbadge.tech/api/badge?user=90202" alt="htb_heatmap" width="100%" height="75%"/>
     </details>
-    <details>
+    <details open>
       <summary>
          <code><b>----------></b></code> <code> 🟪 Hack The Box </code> <code> :: </code> <code> <b>HeatMap</b> </code> <code> << </code> <code> [spoiler] </code>
       </summary>
