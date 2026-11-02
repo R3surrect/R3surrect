@@ -28,7 +28,7 @@ const cellWidth = 16.5;
 const cellHeight = 11;
 const gapY = 4;
 const weeksPerMonth = 5;
-const colors = [BORDER_COLOR, '#0e4429', '#006d32', '#26a641', MAIN_COLOR];
+const colors = [BORDER_COLOR, '#301842', '#5c228a', '#943be0', MAIN_COLOR];
 const rowStepY = cellHeight + gapY;
 const monthCount = data.months.length;
 
