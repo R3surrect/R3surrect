@@ -27,7 +27,7 @@
   </summary>
     <details open>
       <summary>
-         <code><b>----------></b></code> <code> <b>🐧 Environment</b>  </code> <code> :: </code> <code> <b>Tools</b>   </code> <code> << </code> <code> [spoiler] </code>
+         <code> <b>🐧 Environment</b>  </code> <code> :: </code> <code> <b>Tools</b>   </code> <code> << </code> <code> [spoiler] </code>
       </summary>
       </br>
         <img src="https://img.shields.io/badge/Wayland-b5a06f.svg?style=for-the-badge&logo=Wayland&logoColor=white" alt="Wayland" />
