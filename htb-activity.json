@@ -31,8 +31,8 @@
       }
     ],
     "weeks_active": 2,
-    "period_total_xp": 4830,
-    "weekly_average_xp": 2415,
+    "period_total_xp": 4950,
+    "weekly_average_xp": 2475,
     "months": [
       {
         "month": "2025-12",
@@ -499,8 +499,8 @@
           {
             "start_at": "2026-11-02 00:00:00",
             "end_at": "2026-11-08 23:59:59",
-            "xp_earned": 1550,
-            "level": 2,
+            "xp_earned": 1670,
+            "level": 3,
             "is_placeholder": false
           },
           {
@@ -527,19 +527,19 @@
         ]
       }
     ],
-    "total_xp": 6650
+    "total_xp": 6770
   },
   "experience": {
-    "level": 20,
+    "level": 21,
     "levelTitle": "Apprentice",
-    "levelGrade": "1",
+    "levelGrade": "2",
     "rankImage": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/svg/rank_apprentice.svg",
     "rankImageBackground": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/backgrounds/apprentice.svg",
     "outroAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_apprentice_out.json",
     "introAnimation": "https://htb-experience-prod-public-storage.s3.amazonaws.com/assets/ranks/json/rank_apprentice_in.json",
-    "totalExperiencePoints": 6650,
-    "levelExperiencePoints": 404,
-    "experienceUntilNextLevel": 85,
+    "totalExperiencePoints": 6770,
+    "levelExperiencePoints": 35,
+    "experienceUntilNextLevel": 473,
     "streakData": {
       "counter": 2,
       "currentExperiencePoints": 200,
