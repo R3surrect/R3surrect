@@ -542,11 +542,11 @@
     "experienceUntilNextLevel": 433,
     "streakData": {
       "counter": 2,
-      "currentExperiencePoints": 200,
+      "currentExperiencePoints": 0,
       "requiredExperiencePoints": 200,
-      "remainingExperiencePoints": 0,
-      "expiresAt": "2026-11-08T23:59:59+00:00",
-      "isCompleted": true,
+      "remainingExperiencePoints": 200,
+      "expiresAt": "2026-11-15T23:59:59+00:00",
+      "isCompleted": false,
       "inDanger": false,
       "maxStreak": 2,
       "streakSavers": 0
