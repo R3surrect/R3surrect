@@ -547,7 +547,7 @@
       "remainingExperiencePoints": 200,
       "expiresAt": "2026-11-15T23:59:59+00:00",
       "isCompleted": false,
-      "inDanger": false,
+      "inDanger": true,
       "maxStreak": 2,
       "streakSavers": 0
     },
