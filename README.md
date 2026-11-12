@@ -1,4 +1,4 @@
-<details>
+<details open>
   <center>
   <summary>
     <h1>[Stack Info]</h1>
